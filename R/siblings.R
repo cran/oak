@@ -54,7 +54,7 @@ function(.node,
   pa = parent(.node, .tree)
   
   ## attention si le parent est NULL, les siblings n'en sont pas !!
-  if (is.empty(pa)) {
+  if (is_empty(pa)) {
     list()
     
   } else {

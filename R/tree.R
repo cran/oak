@@ -77,11 +77,30 @@ function()
 }
 
 
-#' @importFrom bazar is.empty
 #' @export
 #' @rdname rtree
 #' 
-is.empty.rtree <- 
+is_empty <- 
+function(x)
+{
+  UseMethod("is_empty")
+}
+
+
+#' @export
+#' @rdname rtree
+#' 
+is_empty.default <- 
+function(x)
+{
+  length(x) == 0L
+}
+
+
+#' @export
+#' @rdname rtree
+#' 
+is_empty.rtree <- 
 function(x)
 {
   identical(x, empty_tree())

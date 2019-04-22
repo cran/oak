@@ -20,7 +20,7 @@
 #' @param ...
 #' Additional arguments to be passed to \code{fun}. 
 #' 
-#' @importFrom bazar as.fun
+#' @importFrom rlang as_function
 #' @export
 #' 
 #' @examples 
@@ -57,10 +57,10 @@ function(.tree, # :: Tree -> Tree
          fun, # FUN :: Tree -> a
          ...)
 {
-  if (is.empty(.tree)) {
+  if (is_empty(.tree)) {
     return(.tree)
   }
-  fun = bazar::as.fun(fun)
+  fun = rlang::as_function(fun)
   if (is.rooted(.tree)) {
     f = fun(root(.tree), .tree, ...)
     attr(.tree, at) = f

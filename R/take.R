@@ -25,7 +25,7 @@ function(.node,
   } else {
     p = parent(.node, .tree)
     ## If '.node' does not exist in '.tree': 
-    if (is.empty(p)) {
+    if (is_empty(p)) {
       return(NULL)
     }
     path = find_path_to_node(p, .tree)
@@ -147,7 +147,7 @@ function(.node,
 # function(.tree, 
 #          .node = NULL)
 # {
-#   if (missing(.node) || is.empty(.tree)) {
+#   if (missing(.node) || is_empty(.tree)) {
 #     return(.tree)
 #   }
 #   if (is.node(.node)) {
@@ -160,7 +160,7 @@ function(.node,
 #     return(.tree)
 #   }
 #   r = lapply(.tree, FUN = find_branch.rtree, .node = .node)
-#   w = which(!sapply(r, is.empty))
+#   w = which(!sapply(r, is_empty))
 #   if (length(w) > 0L) {
 #     r[[w]]
 #   } else {

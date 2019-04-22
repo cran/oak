@@ -1,8 +1,8 @@
 
-#' @importFrom bazar is.empty
-#' @export
-#' 
-bazar::is.empty
+# #' @importFrom bazar is.empty
+# #' @export
+# #' 
+# bazar::is_empty
 
 
 #' @importFrom stats update

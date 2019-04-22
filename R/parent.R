@@ -64,7 +64,7 @@ function(.node,
     return(root(.tree)) # BOF, cf. unrooted trees...
   }
   l = lapply(.tree, FUN = function(tr) parent(.node, tr))
-  w = which(!sapply(l, FUN = is.empty))
+  w = which(!sapply(l, FUN = is_empty))
   if (length(w) > 0) {
     as.node(l[[w]])
   } else {
@@ -80,7 +80,7 @@ has.parent <-
 function(.node, 
          .tree)
 {
-  if (is.empty(.tree) || is.null(.node)) {
+  if (is_empty(.tree) || is.null(.node)) {
     return(FALSE)
   }
   if (is.node(.node)) {

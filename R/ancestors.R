@@ -64,7 +64,7 @@ function(.node,
   }
   p = parent(.node, .tree)
   ## If '.node' does not exist in '.tree': 
-  if (is.empty(p)) {
+  if (is_empty(p)) {
     return(list())
   }
   as = c(list(p), ancestors(label(p), .tree, include_node = FALSE))

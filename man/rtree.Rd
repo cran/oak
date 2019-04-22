@@ -4,7 +4,9 @@
 \alias{rtree}
 \alias{r_}
 \alias{empty_tree}
-\alias{is.empty.rtree}
+\alias{is_empty}
+\alias{is_empty.default}
+\alias{is_empty.rtree}
 \title{Tree constructor}
 \usage{
 rtree(label = NULL, subtrees = list(), ...)
@@ -13,7 +15,11 @@ r_(label = NULL, subtrees = list(), ...)
 
 empty_tree()
 
-\method{is.empty}{rtree}(x)
+is_empty(x)
+
+\method{is_empty}{default}(x)
+
+\method{is_empty}{rtree}(x)
 }
 \arguments{
 \item{label}{character. The label of the root of the tree created. 

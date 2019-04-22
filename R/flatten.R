@@ -39,7 +39,7 @@ function(.tree)
 flatten.rtree <- # :: Tree -> [Node]
 function(.tree)
 {
-  if (is.empty(.tree)) {
+  if (is_empty(.tree)) {
     return(list())
   }
   if (length(.tree) == 0L) {
